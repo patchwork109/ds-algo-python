@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/two-sum/description/
 # Create a function that returns the indices of two numbers that add up to the target
 # Do not use the same element twice
 # nums = [2,7,11,15], target = 9 -> [0,1]

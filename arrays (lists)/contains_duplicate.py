@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/contains-duplicate/description/
 # Create a function that returns true if any value appears at least twice
 # and returns false if every element is distinct.
 # nums = [1,2,3,1] -> true
