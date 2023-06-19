@@ -18,19 +18,22 @@ def reverse_string2(any_string):
     reversed_string = []
     for i in range(len(any_string) - 1, -1, -1):
         reversed_string.append(any_string[i])
-    # concatenated_reversed_string = ''.join(reversed_string)
-    # return concatenated_reversed_string
-    return reversed_string
+    concatenated_reversed_string = ''.join(reversed_string)
+    return concatenated_reversed_string
 
 print(reverse_string2(greeting))
 
-# left, right = 0, len(s) - 1
+
+def reverse_string3(s):
+    left, right = 0, len(s) - 1
         
-#         # Loop until the pointers meet at the center
-#         while left < right:
-#             # Swap the characters at the left and right indices
-#             s[left], s[right] = s[right], s[left]
+        # Loop until the pointers meet at the center
+    while left < right:
+            # Swap the characters at the left and right indices
+        s[left], s[right] = s[right], s[left]
             
-#             # Increment left and decrement right
-#             left += 1
-#             right -= 1
+            # Increment left and decrement right
+        left += 1
+        right -= 1
+
+print(reverse_string3(greeting))
