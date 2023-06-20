@@ -27,12 +27,12 @@ print(reverse_string2(greeting))
 def reverse_string3(s):
     left, right = 0, len(s) - 1
         
-        # Loop until the pointers meet at the center
+    # Loop until the pointers meet at the center
     while left < right:
-            # Swap the characters at the left and right indices
+        # Swap the characters at the left and right indices
         s[left], s[right] = s[right], s[left]
             
-            # Increment left and decrement right
+        # Increment left and decrement right
         left += 1
         right -= 1
 
