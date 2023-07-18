@@ -46,3 +46,15 @@ def contains_dupes3(num_list):
     return unique_list
 
 print(contains_dupes3(nums))
+
+
+def contains_dupes4(num_list):
+    unique_list = []
+    for num in num_list:
+        if num not in unique_list:
+            unique_list.append(num)
+        else:
+            return True
+
+print(contains_dupes4(nums))
+        

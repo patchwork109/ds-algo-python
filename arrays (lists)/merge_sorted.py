@@ -59,3 +59,32 @@ def merge_sorted3(any_list1, any_list2):
     return sorted_list
 
 print(merge_sorted3(list1, list2))
+
+
+
+def merge_sorted_lists(list1, list2):
+    sorted_list = []
+    i = 0
+    j = 0
+    for num in list1 + list2:
+        if i >= len(list1):
+            sorted_list.append(list2[j])
+            j += 1
+        elif j >= len(list2):
+            sorted_list.append(list1[i])
+            i += 1
+        elif list1[i] <= list2[j]:
+            sorted_list.append(list1[i])
+            i += 1
+        elif list2[j] <= list1[i]:
+            sorted_list.append(list2[j])
+            j += 1
+
+    return sorted_list
+
+
+a_list = [0,3,4,31]
+another_list = [4,6,30]
+print(merge_sorted_lists(a_list, another_list))
+
+print(f"This is the combo list: {a_list + another_list}")
