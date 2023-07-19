@@ -48,6 +48,10 @@ def contains_dupes3(num_list):
 print(contains_dupes3(nums))
 
 
+
+nums10 = [1,2,3,1,1,5,6,3,4]
+nums11 = [1,5,6,3,4]
+
 def contains_dupes4(num_list):
     unique_list = []
     for num in num_list:
@@ -55,6 +59,6 @@ def contains_dupes4(num_list):
             unique_list.append(num)
         else:
             return True
+    return False
 
-print(contains_dupes4(nums))
-        
+print(f"This is the solution for 4: {contains_dupes4(nums11)}")
