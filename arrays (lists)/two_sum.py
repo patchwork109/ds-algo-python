@@ -13,6 +13,3 @@ def two_sum(num_list, int_target):
                 return [i, j]
 
 print(two_sum(nums, target))
-
-
- 
