@@ -6,6 +6,7 @@
 
 nums = [0,1,0,3,12]
 nums2 = [0,1,0,3,13]
+nums3 = [0,1,0,3,18]
 
 def move_zeros(num_list):
     i = 0
@@ -38,6 +39,19 @@ def move_zeros2(num_list):
     return num_list
 
 print(move_zeros2(nums2))
+
+
+
+def move_zeros3(num_list):
+    i = 0
+    for j in range(len(num_list)):
+        if num_list[j] != 0:
+            num_list[i], num_list[j] = num_list[j], num_list[i]
+            i += 1
+
+    return num_list
+
+print(move_zeros3(nums3))
 
 
 
