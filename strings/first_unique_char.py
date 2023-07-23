@@ -21,6 +21,8 @@ def first_unique_char(any_string):
         
     return -1
 
+print(first_unique_char(s))
+print(first_unique_char(s2))
 print(first_unique_char(s3))
 
 
