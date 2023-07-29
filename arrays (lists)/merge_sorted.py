@@ -83,8 +83,16 @@ def merge_sorted_lists(list1, list2):
     return sorted_list
 
 
-a_list = [0,3,4,31]
-another_list = [4,6,30]
-print(merge_sorted_lists(a_list, another_list))
+# Create a function that merges two sorted arrays (lists)
+# [0, 3, 4, 31], [4, 6, 30] -> [0, 3, 4, 4, 6, 30, 31]
 
-print(f"This is the combo list: {a_list + another_list}")
+list9 = [0, 3, 4, 31]
+list10 = [4, 6, 30]
+
+
+def merge_sorted_lists5(list1, list2):
+    pass
+
+print(f"I'm the newest output: {merge_sorted_lists5(list9,list10)}")
+
+
