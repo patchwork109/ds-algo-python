@@ -9,6 +9,7 @@
 nums = [-4,-1,0,3,10]
 nums2 = [-7,-3,2,3,11]
 
+
 def squares_sorted(nums):
     squared_list = []
 
