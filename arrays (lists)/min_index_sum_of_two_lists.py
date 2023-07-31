@@ -48,3 +48,29 @@ def min_index_sum(list1, list2):
 print(min_index_sum(list1, list2))
 print(min_index_sum(list3, list4))
 
+
+# list1 = ["Shogun","Tapioca Express","Burger King","KFC"]
+# list2 = ["Piatti","The Grill at Torrey Pines","Hungry Hunter Steakhouse","Shogun"]
+# --> ["Shogun"]
+
+# list1 = ["happy","sad","good"], list2 = ["sad","happy","good"] --> ["sad","happy"]
+
+def min_index_sum2(list1, list2):
+
+    common_strings = []
+    for string in list1 and list2:
+        if string in list1 and string in list2:
+            common_strings.append(string)
+
+    result = []
+    min_index_sum = float('inf')
+    for string in common_strings:
+        index_sum = list1.index(string) + list2.index(string)  # Calculate the index sum for each common string
+        if index_sum <= min_index_sum:  # If the index sum is less than the current minimum, update the result list
+            min_index_sum = index_sum
+            result.append(string)
+
+    return result
+
+print(min_index_sum2(list1, list2))
+print(min_index_sum2(list3, list4))

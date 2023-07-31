@@ -53,12 +53,14 @@ nums10 = [1,2,3,1,1,5,6,3,4]
 nums11 = [1,5,6,3,4]
 
 def contains_dupes4(num_list):
-    unique_list = []
+    unique_dict = {}
+
     for num in num_list:
-        if num not in unique_list:
-            unique_list.append(num)
-        else:
+        if num in unique_dict:
             return True
+        else:
+            unique_dict[num] = 1
+    
     return False
 
-print(f"This is the solution for 4: {contains_dupes4(nums11)}")
+print(f"This is the solution for 4: {contains_dupes4(nums10)}")

@@ -25,17 +25,17 @@ def merged_sorted2(any_list1, any_list2):
             sorted_list.append(any_list2[j])
             j += 1
     
-    while i < len(any_list1):
+    if i < len(any_list1):
         sorted_list.append(any_list1[i])
         i += 1
 
-    while j < len(any_list2):
+    if j < len(any_list2):
         sorted_list.append(any_list2[j])
         j += 1
 
     return sorted_list
 
-print(merged_sorted2(list1, list2))
+print(f"This is 2: {merged_sorted2(list1, list2)}")
 
 
 def merge_sorted3(any_list1, any_list2):
@@ -46,12 +46,15 @@ def merge_sorted3(any_list1, any_list2):
         if i >= len(any_list1):
             sorted_list.append(any_list2[j])
             j += 1
+            print(i)
         elif j >= len(any_list2):
             sorted_list.append(any_list1[i])
             i += 1
+            print(i)
         elif any_list1[i] <= any_list2[j]:
             sorted_list.append(any_list1[i])
             i += 1
+            print(i)
         else:
             sorted_list.append(any_list2[j])
             j += 1
