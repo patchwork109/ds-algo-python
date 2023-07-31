@@ -8,6 +8,7 @@
 
 nums = [1,2,3,4,5,6,7]
 nums2 = [1,2,3,4,5,6,7]
+nums3 = [1,2,3,4,5,6,7]
 k = 5
 
 def rotate(num_list, int_step):
@@ -29,3 +30,18 @@ def rotate2(num_list, int_step):
 
 
 print(rotate2(nums2, k))
+
+
+def rotate3(nums, k):
+    k = k % len(nums)
+    print(nums[-k:])
+    print(nums[:-k])
+
+    print(nums[k:])
+    print(nums[:k])
+
+    nums[:] = nums[-k:] + nums[:-k]
+
+    return nums
+
+print(rotate3(nums3, k))

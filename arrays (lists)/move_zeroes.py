@@ -41,7 +41,6 @@ def move_zeros2(num_list):
 print(move_zeros2(nums2))
 
 
-
 def move_zeros3(num_list):
     i = 0
     for j in range(len(num_list)):
@@ -55,7 +54,33 @@ print(move_zeros3(nums3))
 
 
 
+# other approaches assuming you can create another data structure
 
+nums5 = [0,1,0,3,12]
+nums6 = [0,1,0,3,13]
+nums7 = [0,1,0,3,18]
+nums8 = [7,6,4,0,5]
 
+def move_zeros4(nums):
+    num_zeros_end = []
 
+    for num in nums:
+        if num != 0:
+            num_zeros_end.append(num)
+    
+    while len(num_zeros_end) < len(nums):
+        num_zeros_end.append(0)
+    
+    return num_zeros_end
 
+print(move_zeros4(nums5))
+print(move_zeros4(nums6))
+
+def move_zeros5(nums):
+    sorted_nums = sorted(nums)
+    reversed_nums = sorted_nums[::-1]
+    
+    return reversed_nums
+
+print(move_zeros5(nums7))
+print(move_zeros5(nums8))

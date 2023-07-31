@@ -37,4 +37,13 @@ print(remove_duplicates2(nums2))
 print(nums2)
 
 
+def remove_duplicates6(nums):
+    j = 1
+    for i in range(1, len(nums)):
+        if nums[i] != nums[i - 1]:
+            nums[j] = nums[i]
+            j += 1       
+    return j
 
+print(remove_duplicates6(nums3))
+print(nums3)

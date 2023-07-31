@@ -23,10 +23,9 @@ def plus_one(int_list):
     incremented_num = concatenated_num + 1
 
     incremented_num_str = str(incremented_num)
-    list_incremented_num_str = list(incremented_num_str)
 
     new_digit_list = []
-    for num_str in list_incremented_num_str:
+    for num_str in incremented_num_str:
         new_digit_list.append(int(num_str))
   
     return new_digit_list
@@ -35,6 +34,22 @@ def plus_one(int_list):
 print(plus_one(digits))
 
 
+# redid problem for practice
+def plus_one2(digits):
+    big_int = []
+
+    for digit in digits:
+        big_int.append(str(digit))
+    
+    concatenated_incremented_int = str(int(''.join(big_int)) + 1)
+
+    result = []
+    for char in concatenated_incremented_int:
+        result.append(int(char))
+
+    return result
+
+print(plus_one2(digits))
 
 
 
