@@ -36,3 +36,32 @@ def most_frequent_even(nums):
 print(most_frequent_even(nums))
 print(most_frequent_even(nums2))
 print(most_frequent_even(nums3))
+
+
+
+def most_frequent_even2(nums):
+    evens = {}
+
+    for num in nums:
+        if num % 2 == 0 and num not in evens:
+            evens[num] = 1
+        elif num % 2 == 0 and num in evens:
+            evens[num] += 1
+
+    if not evens:
+        return -1
+    
+    most_freq_even = max(evens.values())
+
+    most_freq_evens_list = []
+    for key, value in evens.items():
+        if value == most_freq_even:
+            most_freq_evens_list.append(key)
+    
+    return min(most_freq_evens_list)
+
+
+print(most_frequent_even2(nums))
+print(most_frequent_even2(nums2))
+print(most_frequent_even2(nums3))
+
