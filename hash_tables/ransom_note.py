@@ -66,3 +66,31 @@ print(ransom_note2(ransomNote2, magazine2))
 print(ransom_note2(ransomNote3, magazine3))
 print(ransom_note2(ransomNote4, magazine4))
 
+
+def ransom_note3(ransomNote, magazine):
+    rn_dict = {}
+    m_dict = {}
+
+    for letter in ransomNote:
+        if letter not in rn_dict:
+            rn_dict[letter] = 1
+        else:
+            rn_dict[letter] += 1
+
+    for letter in magazine:
+        if letter not in m_dict:
+            m_dict[letter] = 1
+        else:
+            m_dict[letter] += 1
+
+    for key, value in rn_dict.items():
+        if key not in m_dict or value > m_dict[key]:
+            return False
+        
+    return True
+
+print(ransom_note3(ransomNote, magazine))
+print(ransom_note3(ransomNote2, magazine2))
+print(ransom_note3(ransomNote3, magazine3))
+print(ransom_note3(ransomNote4, magazine4))
+
