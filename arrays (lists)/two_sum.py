@@ -4,7 +4,9 @@
 # nums = [2,7,11,15], target = 9 -> [0,1]
 
 nums = [2,7,11,15]
+nums2 = [3,3]
 target = 9
+target2 = 6
 
 def two_sum(num_list, int_target):
     for i in range(len(num_list)):
@@ -13,3 +15,24 @@ def two_sum(num_list, int_target):
                 return [i, j]
 
 print(two_sum(nums, target))
+
+
+def two_sum2(nums, target):
+    numMap = {}
+
+    # Build the hash table
+    for i in range(len(nums)):
+        numMap[nums[i]] = i
+
+    # Find the complement
+    for i in range(len(nums)):
+        complement = target - nums[i]
+        if complement in numMap and numMap[complement] != i:
+            return [i, numMap[complement]]
+
+    return []  # No solution found
+
+print(two_sum2(nums2, target2))
+
+
+    

@@ -67,3 +67,21 @@ print(squares_sorted3(nums))
 print(squares_sorted3(nums2))
 
 
+def squares_sorted4(nums):
+    left = 0 
+    right = len(nums) - 1
+    squares_sorted_list = []
+
+    while left <= right:
+        if nums[left]**2 > nums[right]**2:
+            squares_sorted_list.append(nums[left]**2)
+            left += 1
+        else:
+            squares_sorted_list.append(nums[right]**2)
+            right -= 1
+    
+    return squares_sorted_list[::-1]
+
+print(f"This is #4: {squares_sorted4(nums)}")
+
+
