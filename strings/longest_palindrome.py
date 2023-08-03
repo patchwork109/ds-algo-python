@@ -30,12 +30,7 @@ def longest_palindrome(s):
             longest_count.append(value)
     
         elif value % 2 != 0:
-            max_single_char.append(value)
-    
-    print(seen_char_count)
-    print(sum(longest_count))
-    print((max_single_char))
-    print(max(max_single_char))        
+            max_single_char.append(value)       
     
     return sum(longest_count) + max(max_single_char)
 

@@ -21,7 +21,7 @@ def valid_palindrome(s):
     
     concatenated_string = ''.join(converted_string)
     
-    return concatenated_string[:len(concatenated_string)] == concatenated_string[::-1]
+    return concatenated_string == concatenated_string[::-1]
 
 
 print(valid_palindrome(s))

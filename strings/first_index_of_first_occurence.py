@@ -16,3 +16,12 @@ def index_of_first_occurrence(needle, haystack):
     return -1
 
 print(index_of_first_occurrence(needle, haystack))
+
+
+def index_of_first_occurrence2(needle, haystack):
+    for index in range(len(haystack)):
+        if haystack[index:index + len(needle)] == needle:
+            return index
+    return -1
+
+print(index_of_first_occurrence2(needle, haystack))
